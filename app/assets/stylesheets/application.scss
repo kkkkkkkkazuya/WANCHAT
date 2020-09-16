@@ -2,6 +2,24 @@ header {
   background-color: #E6FFE9;
 }
 
+a:link { /*アクセスしたことのないリンク*/
+color: #FFABCE;
+}
+
+a:visited { /*アクセスしたことのあるリンク*/
+color: #000000;
+}
+
+a:hover {/*マウスが上に乗っている状態*/
+color: #000000;
+}
+
+a:active {/*クリック中*/
+color: #000000;
+}
+
+
+
 .top-main {
   font-size: 60px;
   background-image: url(/sozai_image_111264.png);
@@ -36,4 +54,20 @@ header {
 
 .check-content {
   font-size: 30px;
+}
+
+.all-posts-index {
+max-width: 600px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+.content-posts-index{
+  padding: 20px 30px;
+  background-color: #E6FFE9;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #000000;
+  text-align: center;
 }

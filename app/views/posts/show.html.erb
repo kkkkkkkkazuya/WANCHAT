@@ -1,2 +1,6 @@
-<%= @post.content %>
-<%= @post.created_at %>
+<div class="all-posts-index">
+  <div class="content-posts-index font-weight-bold">
+    <%= @post.content %><br> <%#lを入れると表記が消える %>
+    <%= l @post.created_at %>
+  </div>
+</div>

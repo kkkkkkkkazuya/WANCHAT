@@ -15,17 +15,20 @@
   <body>
     <header>
       <div class="d-flex">
-        <div class="font-weight-bold p-2">
-          <a href="/" class="p-3 mb-2 text-dark">wanchat</a>
+        <div class="font-weight-bold p-3">
+          <%= link_to("WANCHAT", "/")%>
         </div>
-        <div class="font-weight-bold p-2">
-          <a href="about" class="p-3 mb-2 text-dark">wanchatとは</a>
+        <div class="font-weight-bold p-3">
+          <%= link_to("WANCHATとは", about_path)%>
         </div>
-        <div class="font-weight-bold p-2">
-          <a href="check" class="p-3 mb-2 text-dark">なぜ作成したのか</a>
+        <div class="font-weight-bold p-3">
+          <%= link_to("なぜ作ったのか", check_path)%>
         </div>
-        <div class="font-weight-bold p-2">
-          <a href="posts" class="p-3 mb-2 text-dark">投稿画面へ</a>
+        <div class="font-weight-bold p-3">
+          <%= link_to("投稿画面へ", posts_path)%>
+        </div>
+        <div class="font-weight-bold p-3">
+          <%= link_to("新規投稿", new_post_path)%>
         </div>
       </div>
     </header>

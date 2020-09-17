@@ -2,11 +2,12 @@
   <div class="content-posts-new font-weight-bold text-center">
     <h1>〜WANCHATな投稿をしましょう！〜</h1>
   </div>
-    <div class="posts-new-textarea text-center">
-      <textarea></textarea>
-    </div>
-      <div class="posts-new-button text-center">
-        <br><input type="submit" value="ワン！">
+    <%= form_tag(posts_path) do %>
+      <div class="posts-new-textarea text-center">
+        <textarea name="content"></textarea>
       </div>
-
+        <div class="posts-new-button text-center">
+          <br><input type="submit" value="ワン！">
+        </div>
+    <% end %>
 </div>

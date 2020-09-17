@@ -64,10 +64,23 @@ max-width: 600px;
   clear: both;
 }
 
-.content-posts-index{
+.content-posts-index {
   padding: 20px 30px;
   background-color: #E6FFE9;
   overflow: hidden;
   box-shadow: 0 2px 6px #000000;
   text-align: center;
+}
+
+.all-posts-new{
+background-color: #E6FFE9;
+}
+
+.content-posts-new {
+  padding: 40px 40px;
+}
+
+.posts-new-textarea{
+  font-size: 17px;
+    padding: 20px;
 }

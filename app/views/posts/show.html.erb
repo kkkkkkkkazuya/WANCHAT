@@ -1,6 +1,7 @@
 <div class="all-posts-index">
   <div class="content-posts-index font-weight-bold">
     <%= @post.content %><br>
-    <%= l @post.created_at %>
+    <%= l @post.created_at %><br>
+    <%= link_to("(編集)", edit_post_path(@post.id)) %>
   </div>
 </div>

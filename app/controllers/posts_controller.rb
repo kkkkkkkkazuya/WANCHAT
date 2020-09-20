@@ -24,5 +24,16 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find_by(id: params[:id])
   end
-  
+
+  def update
+    @post = Post.find_by(id: params[:id])
+    @post.content = params[:content]
+    if @post.save
+      flash[:notice] = "編集完了"
+      redirect_to(posts_path)
+    else
+      render action: :edit
+    end
+  end
+
 end

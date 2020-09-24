@@ -1,7 +1,7 @@
-<div class="all-posts-index">
-  <div class="content-posts-index font-weight-bold">
-    <%= @post.content %><br>
-    <%= l @post.created_at %><br>
+<div class="all-posts-show">
+  <div class="content-posts-show font-weight-bold">
+    コメント： <%= @post.content %><br>
+    時間： <%= l @post.created_at %><br>
     <%= link_to("(編集)", edit_post_path(@post.id)) %>
     <%= link_to("(削除)", post_path(@post.id), {method: :delete}) %>
   </div>

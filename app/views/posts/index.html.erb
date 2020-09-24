@@ -1,4 +1,5 @@
 <div class="all-posts-index">
+  <h1 class="text-center font-weight-bold p-3 text-success">〜投稿一覧〜</h1>
   <% @posts.each do |post|%>
     <div class="content-posts-index font-weight-bold">
       <%= link_to(post.content, post_path(post.id))%>

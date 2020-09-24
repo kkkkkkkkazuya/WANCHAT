@@ -1,0 +1,8 @@
+<div class="all-users-index">
+  <h1 class="text-center font-weight-bold p-3 text-success">〜飼主一覧〜</h1>
+    <% @users.each do |user| %>
+      <div class="content-users-index font-weight-bold">
+        <%= user.name %>
+      </div>
+    <% end %>
+</div>

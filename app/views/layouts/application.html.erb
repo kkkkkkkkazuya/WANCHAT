@@ -18,21 +18,31 @@
         <div class="font-weight-bold p-3">
           <%= link_to("WANCHAT", "/")%>
         </div>
+
         <div class="font-weight-bold p-3">
           <%= link_to("WANCHATとは", about_path)%>
         </div>
+
         <div class="font-weight-bold p-3">
           <%= link_to("なぜ作ったのか", check_path)%>
         </div>
+
         <div class="font-weight-bold p-3">
           <%= link_to("投稿画面へ", posts_path)%>
         </div>
+
         <div class="font-weight-bold p-3">
           <%= link_to("新規投稿", new_post_path)%>
         </div>
+
         <div class="font-weight-bold p-3">
           <%= link_to("飼主一覧", users_path)%>
         </div>
+
+        <div class="font-weight-bold p-3">
+          <%= link_to("新規飼主",new_user_path)%>
+        </div>
+
       </div>
     </header>
     <% if flash[:notice] %>

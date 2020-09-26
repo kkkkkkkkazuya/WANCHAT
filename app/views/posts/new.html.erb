@@ -3,11 +3,12 @@
     <h1>〜WANCHATな投稿をしましょう！〜</h1>
   </div>
     <%= form_tag(posts_path) do %>
-      <div class="posts-new-error text-center">
+      <div class="posts-new-error text-center font-weight-bold">
         <% @post.errors.full_messages.each do |message| %>
-          <%= message %>
+          <p>＊<%= message %></p>
         <% end %>
       </div>
+
           <div class="posts-new-textarea text-center">
             <textarea name="content"><%= @post.content %></textarea>
           </div>

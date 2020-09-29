@@ -1,6 +1,9 @@
 <div class="all-users-show">
   <div class="content-users-show font-weight-bold">
-    名前： <%= @user.name %><br>
-    メールアドレス： <%= @user.email %>
+    <p>名前： <%= @user.name %><br></p>
+    <p>メールアドレス： <%= @user.email %></p>
+    <div class="users-show-edit">
+    <%= link_to("（編集）", edit_user_path) %>
+    </div>
   </div>
 </div>

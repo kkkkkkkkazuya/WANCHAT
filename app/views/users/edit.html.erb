@@ -9,10 +9,12 @@
   </div>
 
   <div class="users-edit-content text-center font-weight-bold">
-    <%= form_tag(user_path(@user.id), method: :patch) do %>
-      <p class="font-weight-bold m-3">-飼主名-</p>
+    <%= form_tag(user_path(@user.id), {multipart: true}) do %>
+      <p class="m-4">-画像-</p>
+        <input name="image" type="file">
+      <p class="font-weight-bold m-4">-飼主名-</p>
         <input name= "name" value="<%= @user.name %>">
-      <p class="font-weight-bold m-3">-メールアドレス-</p>
+      <p class="font-weight-bold m-4">-メールアドレス-</p>
         <input name="email" value="<%= @user.email %>">
           <div class="users-edit-button text-center m-4">
             <input type="submit" value="登録">

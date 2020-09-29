@@ -2,6 +2,9 @@
   <h1 class="text-center font-weight-bold p-3 text-success">〜飼主一覧〜</h1>
     <% @users.each do |user| %>
       <div class="content-users-index font-weight-bold">
+        <div class="user-photo">
+          <img src="<%= "/user_images/#{user.image_name}" %>">
+        </div>
         <%= link_to(user.name, user_path(user.id)) %>
       </div>
     <% end %>

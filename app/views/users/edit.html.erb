@@ -9,7 +9,7 @@
   </div>
 
   <div class="users-edit-content text-center font-weight-bold">
-    <%= form_tag(user_path(@user.id), {multipart: true}) do %>
+    <%= form_tag(user_path(@user.id), method: :patch, multipart: true) do %>
       <p class="m-4">-画像-</p>
         <input name="image" type="file">
       <p class="font-weight-bold m-4">-飼主名-</p>

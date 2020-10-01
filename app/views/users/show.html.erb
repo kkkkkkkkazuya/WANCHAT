@@ -1,10 +1,12 @@
 <div class="all-users-show">
-  <div class="content-users-show font-weight-bold">
-    <img src="<%= "/user_images/#{@user.image_name}" %>">
-    <p>名前： <%= @user.name %><br></p>
-    <p>メールアドレス： <%= @user.email %></p>
-    <div class="users-show-edit">
-    <%= link_to("（編集）", edit_user_path) %>
+  <div class="user-show-photo">
+    <div class="content-users-show font-weight-bold">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <p>名前： <%= @user.name %><br></p>
+      <p>メールアドレス： <%= @user.email %></p>
+      <div class="users-show-edit">
+      <%= link_to("（編集）", edit_user_path) %>
+      </div>
     </div>
   </div>
 </div>

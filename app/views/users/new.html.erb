@@ -4,7 +4,7 @@
   </div>
   <div class="users-new-error text-center font-weight-bold">
     <% @user.errors.full_messages.each do |message| %>
-      <p>＊その<%= message %><p>
+      <p>＊<%= message %><p>
     <% end %>
   </div>
 

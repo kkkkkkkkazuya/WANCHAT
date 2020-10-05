@@ -6,20 +6,20 @@
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="users-new-content text-center font-weight-bold">
           <div class="field">
-            <%= f.label :email %><br />
+            <%= f.label :email, "メールアドレス" %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
           </div>
 
           <div class="field">
-            <%= f.label :password %>
+            <%= f.label :password, "パスワード" %>
             <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> 文字以上)</em>
+            <em>(<%= @minimum_password_length %> 文字以上で入力)</em>
             <% end %><br />
             <%= f.password_field :password, autocomplete: "new-password" %>
           </div>
 
           <div class="field">
-            <%= f.label :password_confirmation %><br />
+            <%= f.label :password_confirmation, "パスワードの確認" %><br />
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
           </div>
         <div class="users-new-button text-center m-4">

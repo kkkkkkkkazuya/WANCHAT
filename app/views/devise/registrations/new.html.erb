@@ -2,10 +2,8 @@
   <div class="users-new-title">
     <h1 class="text-center font-weight-bold text-success">〜新規飼主登録画面〜</h1>
   </div>
-  <div class="users-new-error text-center font-weight-bold">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-  </div>
       <div class="users-new-content text-center font-weight-bold">
           <div class="field">
             <%= f.label :email %><br />

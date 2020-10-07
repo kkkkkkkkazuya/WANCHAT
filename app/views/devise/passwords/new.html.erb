@@ -1,8 +1,8 @@
-<div class="all-users-new">
-  <div class="users-new-title">
+<div class="all-users-devise">
+  <div class="users-devise-title">
     <h2 class="text-center font-weight-bold text-success">パスワードを忘れた方</h2>
   </div>
-  <div class="users-new-content text-center font-weight-bold">
+  <div class="users-devise-content text-center font-weight-bold">
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 

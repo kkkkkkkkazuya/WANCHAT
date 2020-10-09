@@ -4,18 +4,15 @@
   </div>
   <div class="users-devise-content text-center font-weight-bold">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field p-3">
-      <%= f.label :email, "メールアドレス" %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
+      <div class="field p-3">
+        <%= f.label :email, "メールアドレス" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-    <div class="field p-3">
-      <%= f.label :password, "パスワード" %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
-  </div>
-
-    <div class="users_devise_sub text-center font-weight-bold">
+      <div class="field p-3">
+        <%= f.label :password, "パスワード" %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
       <% if devise_mapping.rememberable? %>
         <div class="field">
           <%= f.check_box :remember_me %>

@@ -233,3 +233,16 @@ background-color: #E6FFE9;
 .users-devise-button {
   font-size: 20px;
 }
+
+
+.alert {
+  padding: 10px 0;
+  color: black;
+  background: rgb(0,255,0.5);
+  text-align: center;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}

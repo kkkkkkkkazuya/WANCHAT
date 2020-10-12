@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :ensure_corrent_user, {only: [:edit, :update]}
 
   def index
     @users = User.all
@@ -48,6 +49,13 @@ class UsersController < ApplicationController
       redirect_to(user_path(@user.id))
     else
       render action: :edit
+    end
+  end
+
+  def ensure_corrent_user
+    if current_user.id != params[:id].to_i
+      flash[:notice] = "本人のみ編集ができます"
+      redirect_to(posts_path)
     end
   end
 end

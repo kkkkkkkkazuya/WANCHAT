@@ -74,11 +74,22 @@ max-width: 600px;
 
 .all-posts-show {
 max-width: 700px;
-  margin: 180px auto;
+  margin: 70px auto;
   padding-left: 15px;
   padding-right: 15px;
   clear: both;
 }
+
+.posts-show-photo img {
+  width: 300px;
+  height: 300px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 10px 0 10px;
+  object-fit: cover;
+}
+
+
 
 .content-posts-show {
   padding: 50px 50px;
@@ -153,14 +164,14 @@ background-color: #E6FFE9;
 
 .all-users-show {
   max-width: 700px;
-  margin: 180px auto;
+  margin: 50px auto;
   padding-left: 15px;
   padding-right: 15px;
   clear: both;
 }
 
 .content-users-show {
-  padding: 50px 50px;
+  padding: 30px 30px;
   background-color: #E6FFE9;
   overflow: hidden;
   box-shadow: 0 2px 6px #000000;
@@ -170,8 +181,8 @@ background-color: #E6FFE9;
 
 
 .user-show-photo img {
-  width: 80px;
-  height: 80px;
+  width: 300px;
+  height: 300px;
   border-radius: 40%;
   box-shadow: 0 2px 6px #c1ced7;
   margin: 20px 0 10px;

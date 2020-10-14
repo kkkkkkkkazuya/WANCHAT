@@ -1,14 +1,15 @@
 <div class="all-users-show">
-  <div class="user-show-photo">
-    <div class="content-users-show font-weight-bold">
-      <img src="<%= "/user_images/#{@user.image_name}" %>">
-      <p>名前： <%= @user.name %><br></p>
-      <p>メールアドレス： <%= @user.email %></p>
-      <% if @user.id == current_user.id %>
-      <div class="users-show-edit">
-        <%= link_to("（編集）", edit_user_path) %>
-      <% end %>
+  <h1 class="text-center font-weight-bold p-3 text-success">〜マイページ〜</h1><br>
+    <div class="user-show-photo">
+      <div class="content-users-show font-weight-bold">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <p>飼主： <%= @user.name %><br></p>
+        <p>メールアドレス： <%= @user.email %></p>
+        <% if @user.id == current_user.id %>
+        <div class="users-show-edit">
+          <%= link_to("（編集）", edit_user_path) %>
+        <% end %>
+        </div>
       </div>
     </div>
-  </div>
 </div>

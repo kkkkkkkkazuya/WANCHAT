@@ -1,8 +1,12 @@
 <div class="all-posts-show">
-  <div class="content-posts-show font-weight-bold">
-    コメント： <%= @post.content %><br>
-    時間： <%= l @post.created_at %><br>
-    <%= link_to("(編集)", edit_post_path(@post.id)) %>
-    <%= link_to("(削除)", post_path(@post.id), {method: :delete}) %>
+  <div class="posts-show-photo">
+    <div class="content-posts-show font-weight-bold">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <p>飼主：<%= link_to(@user.name, user_path(@user.id)) %></p>
+      <p>コメント： <%= @post.content %></p>
+      <p>時間： <%= l @post.created_at %></p>
+      <%= link_to("(編集)", edit_post_path(@post.id)) %>
+      <%= link_to("(削除)", post_path(@post.id), {method: :delete}) %>
+    </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <h1 class="text-center font-weight-bold p-3 text-success">〜マイページ〜</h1><br>
     <div class="user-show-photo">
       <div class="content-users-show font-weight-bold">
-        <%= image_tag "/user_images/#{@user.image_name}" %>
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
         <p>飼主： <%= @user.name %><br></p>
         <p>メールアドレス： <%= @user.email %></p>
         <% if @user.id == current_user.id %>

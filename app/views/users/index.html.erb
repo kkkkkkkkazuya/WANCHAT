@@ -3,7 +3,7 @@
     <% @users.each do |user| %>
       <div class="content-users-index font-weight-bold">
         <div class="user-photo">
-          <%= image_tag "/user_images/#{user.image_name}" %>
+          <img src="<%= "/user_images/#{user.image_name}" %>">
         </div>
         <div class="user-name-index">
           飼主：<%= link_to(user.name, user_path(user.id)) %>

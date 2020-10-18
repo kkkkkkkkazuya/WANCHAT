@@ -2,11 +2,13 @@
   <h1 class="text-center font-weight-bold p-3 text-success">〜投稿一覧〜</h1>
   <% @posts.each do |post|%>
     <div class="content-posts-index font-weight-bold">
-      <div class="user-photo">
+      <div class="posts-user-photo">
         <img src="<%= "/user_images/#{post.user.image_name}" %>">
       </div>
-      <%= link_to(post.user.name, user_path(post.user.id)) %>
-      <%= link_to(post.content, post_path(post.id))%>
+      <div class="posts-user-content">
+        <p>飼主：<%= link_to(post.user.name, user_path(post.user.id)) %></p>
+        <p>内容：<%= link_to(post.content, post_path(post.id))%></p>
+      </div>
     </div>
   <% end %>
 </div>

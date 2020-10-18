@@ -13,3 +13,17 @@
       </div>
     </div>
 </div>
+  <div class="all-users-show-second">
+    <h1>〜マイコメント一覧〜</h1>
+  </div>
+    <% @user.posts.each do |post| %>
+      <div class="content-posts-show font-weight-bold">
+        <div class="posts-user-photo">
+          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        </div>
+        <div class="posts-user-content">
+          <p>飼主：<%= link_to(post.user.name, user_path(post.user.id)) %></p>
+          <p>内容：<%= link_to(post.content, post_path(post.id))%></p>
+        </div>
+      </div>
+    <% end %>

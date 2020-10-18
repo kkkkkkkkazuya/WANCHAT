@@ -5,11 +5,11 @@
         <img src="<%= "/user_images/#{@user.image_name}" %>">
         <p>飼主： <%= @user.name %><br></p>
         <p>メールアドレス： <%= @user.email %></p>
-        <% if @user.id == current_user.id %>
-        <div class="users-show-edit">
-          <%= link_to("（編集）", edit_user_path) %>
-        <% end %>
-        </div>
+          <% if @user.id == current_user.id %>
+            <div class="users-show-edit">
+              <%= link_to("（編集）", edit_user_path) %>
+            </div>
+          <% end %>
       </div>
     </div>
 </div>

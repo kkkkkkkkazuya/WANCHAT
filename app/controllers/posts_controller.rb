@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+  before_action :ensure_current_user, {only: [:edit, :destroy, :update]}
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -48,6 +49,14 @@ class PostsController < ApplicationController
     @post.destroy!
     flash[:notice] = "投稿削除完了"
     redirect_to(posts_path)
+  end
+
+  def ensure_current_user
+    @post = Post.find_by(id: params[:id])
+    if @post.user_id != current_user.id
+      flash[:notice] = "自分の投稿のみ編集・削除ができます"
+      redirect_to(posts_path)
+    end
   end
 
 end

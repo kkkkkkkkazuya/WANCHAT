@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :ensure_corrent_user, {only: [:edit, :update]}
+  before_action :ensure_current_user, {only: [:edit, :update]}
 
   def index
     @users = User.all
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def ensure_corrent_user
+  def ensure_current_user
     if current_user.id != params[:id].to_i
       flash[:notice] = "本人のみ編集ができます"
       redirect_to(posts_path)

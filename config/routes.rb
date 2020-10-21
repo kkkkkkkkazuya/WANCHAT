@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   resources :users, except: [:new, :create, :destroy]
+  resources :posts do
+    post "like" => "likes#create"
+    delete "/like" => "likes#destroy"
+  end
 
   get "/" => "home#top"
   get "about" => "home#about"

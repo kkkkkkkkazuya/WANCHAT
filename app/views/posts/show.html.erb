@@ -5,6 +5,9 @@
       <p>飼主：<%= link_to(@user.name, user_path(@user.id)) %></p>
       <p>コメント： <%= @post.content %></p>
       <p>時間： <%= l @post.created_at %></p>
+      <div id="like-btn-<%= post.id %>">
+        <%= render 'likes/like', post: post %>
+      </div>
       <% if @post.user.id == current_user.id %>
         <%= link_to("(編集)", edit_post_path(@post.id)) %>
         <%= link_to("(削除)", post_path(@post.id), {method: :delete}) %>

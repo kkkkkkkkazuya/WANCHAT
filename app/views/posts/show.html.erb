@@ -8,6 +8,7 @@
       <div id="like-btn-<%= @post.id %>">
         <%= render 'likes/like', post: @post %>
       </div>
+      <p><%= @likes_count %></p>
       <% if @post.user.id == current_user.id %>
         <%= link_to("(編集)", edit_post_path(@post.id)) %>
         <%= link_to("(削除)", post_path(@post.id), {method: :delete}) %>

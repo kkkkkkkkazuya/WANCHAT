@@ -1,0 +1,15 @@
+<div class="all-users-show-second">
+  <h1 class="font-weight-bold">〜ハートを押した投稿一覧〜</h1>
+</div>
+<% @likes.each do |like| %>
+  <% post = Post.find_by(id: like.post_id)%>
+  <div class="content-posts-show font-weight-bold">
+    <div class="posts-user-photo">
+      <img src="<%= "/user_images/#{post.user.image_name}" %>">
+    </div>
+    <div class="posts-user-content">
+      <p>飼主：<%= link_to(post.user.name, user_path(post.user.id)) %></p>
+      <p>内容：<%= link_to(post.content, post_path(post.id))%></p>
+    </div>
+  </div>
+<% end %>

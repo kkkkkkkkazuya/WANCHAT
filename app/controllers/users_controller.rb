@@ -33,6 +33,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def likes
+    @user = User.find_by(id: params[:user_id])
+    @likes = Like.where(user_id: @user.id)
+  end
+
   def ensure_current_user
     if current_user.id != params[:id].to_i
       flash[:notice] = "本人のみ編集ができます"

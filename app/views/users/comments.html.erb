@@ -1,8 +1,7 @@
 <div class="all-users-show-second">
-  <h1 class="text-center font-weight-bold p-3 text-success">〜ハートを押した投稿一覧〜</h1>
+  <h1 class="text-center font-weight-bold p-3 text-success">〜マイコメント一覧〜</h1>
 </div>
-<% @likes.each do |like| %>
-  <% post = Post.find_by(id: like.post_id)%>
+<% @user.posts.each do |post| %>
   <div class="content-posts-show font-weight-bold">
     <div class="posts-user-photo">
       <img src="<%= "/user_images/#{post.user.image_name}" %>">

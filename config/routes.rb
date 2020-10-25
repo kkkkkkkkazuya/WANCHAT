@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :users do
     get "likes" => "users#likes"
+    get "mycomments"=> "users#comments"
   end
 
   get "/" => "home#top"

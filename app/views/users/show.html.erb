@@ -13,20 +13,10 @@
       </div>
     </div>
 </div>
+  <h1 class="text-center">⬇️下記を閲覧したい場合クリック！⬇️</h1>
   <div class="all-users-show-second">
-    <h1>〜マイコメント一覧〜</h1>
+    <h2 class="font-weight-bold"><%=link_to("〜マイコメント一覧〜", user_mycomments_path(@user.id))%></h2>
   </div>
-    <% @user.posts.each do |post| %>
-      <div class="content-posts-show font-weight-bold">
-        <div class="posts-user-photo">
-          <img src="<%= "/user_images/#{post.user.image_name}" %>">
-        </div>
-        <div class="posts-user-content">
-          <p>飼主：<%= link_to(post.user.name, user_path(post.user.id)) %></p>
-          <p>内容：<%= link_to(post.content, post_path(post.id))%></p>
-        </div>
-      </div>
-    <% end %>
     <div class="all-users-show-second">
-      <h1><%=link_to("〜ハート押した投稿一覧〜", user_likes_path(@user.id)) %></h1>
+      <h2 class="font-weight-bold"><%=link_to("〜ハート押した投稿一覧〜", user_likes_path(@user.id)) %></h2>
     </div>

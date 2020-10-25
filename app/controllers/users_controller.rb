@@ -33,6 +33,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def comments
+    @user = User.find_by(id: params[:user_id])
+  end
+
   def likes
     @user = User.find_by(id: params[:user_id])
     @likes = Like.where(user_id: @user.id)

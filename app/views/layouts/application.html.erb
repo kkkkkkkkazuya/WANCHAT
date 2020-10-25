@@ -14,48 +14,7 @@
 
   <body>
     <header>
-      <% if user_signed_in? %>
-        <div class="d-flex">
-          <div class="font-weight-bold p-3">
-            <%= link_to("投稿画面へ", posts_path)%>
-          </div>
-          <div class="font-weight-bold p-3">
-            <%= link_to("新規投稿", new_post_path)%>
-          </div>
-          <div class="font-weight-bold p-3">
-            <%= link_to("飼主一覧", users_path)%>
-          </div>
-          <div class="font-weight-bold p-3">
-            <%= link_to("マイページ", user_path(current_user.id))%>
-          </div>
-          <div class="font-weight-bold p-3">
-            <%= link_to("ログアウト", destroy_user_session_path, method: :delete)%>
-          </div>
-        </div>
-
-      <% else %>
-        <div class="d-flex">
-          <div class="font-weight-bold p-3">
-            <%= link_to("WANCHAT", "/")%>
-          </div>
-
-          <div class="font-weight-bold p-3">
-            <%= link_to("WANCHATとは", about_path)%>
-          </div>
-
-          <div class="font-weight-bold p-3">
-            <%= link_to("なぜ作ったのか", check_path)%>
-          </div>
-
-          <div class="font-weight-bold p-3">
-            <%= link_to("新規飼主",new_user_registration_path, class: 'post')%>
-          </div>
-
-          <div class="font-weight-bold p-3">
-            <%= link_to("ログイン",new_user_session_path, class: 'post')%>
-          </div>
-        </div>
-      <% end %>
+      <%= render "layouts/header" %>
     </header>
     <% if flash[:notice] %>
       <div class="flash">
@@ -70,6 +29,9 @@
     <% end %>
 
     <%= yield %>
+    <footer>
+      <%= render "layouts/footer" %>
+    </footer>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

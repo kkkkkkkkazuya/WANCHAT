@@ -61,10 +61,4 @@ class PostsController < ApplicationController
     end
   end
 
-  private
-
-  def params_post_search
-    params.permit(:search_contet)
-  end
-
 end

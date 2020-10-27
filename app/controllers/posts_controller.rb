@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :ensure_current_user, {only: [:edit, :destroy, :update]}
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @search = Post.search(params[:q])
+    @posts = @search.result
   end
 
   def show
@@ -58,6 +59,12 @@ class PostsController < ApplicationController
       flash[:notice] = "自分の投稿のみ編集・削除ができます"
       redirect_to(posts_path)
     end
+  end
+
+  private
+
+  def params_post_search
+    params.permit(:search_contet)
   end
 
 end

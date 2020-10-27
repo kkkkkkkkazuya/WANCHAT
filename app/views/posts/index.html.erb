@@ -1,5 +1,12 @@
 <div class="all-posts-index">
   <h1 class="text-center font-weight-bold p-3 text-success">〜投稿一覧〜</h1>
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :content_cont, "内容検索：" %>
+      <%= f.text_field :content_cont %>
+      <%= f.submit %>
+    </div>
+  <% end %>
   <% @posts.each do |post|%>
     <div class="content-posts-index font-weight-bold">
       <div class="posts-user-photo">

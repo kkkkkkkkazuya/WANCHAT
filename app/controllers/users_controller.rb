@@ -3,8 +3,8 @@ class UsersController < ApplicationController
   before_action :ensure_current_user, {only: [:edit, :update]}
 
   def index
-    @search = User.search(params[:q])
-    @users = @search.result
+    @search_user = User.search(params[:q])
+    @users = @search_user.result
   end
 
   def show

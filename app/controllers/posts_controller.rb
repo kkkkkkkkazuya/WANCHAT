@@ -3,8 +3,10 @@ class PostsController < ApplicationController
   before_action :ensure_current_user, {only: [:edit, :destroy, :update]}
 
   def index
-    @search = Post.search(params[:q])
-    @posts = @search.result
+    @search_post = Post.search(params[:q])
+    @search_user = User.search(params[:q])
+    @posts = @search_post.result
+    @users = @search_user.result
   end
 
   def show

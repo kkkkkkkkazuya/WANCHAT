@@ -1,5 +1,12 @@
 <div class="all-users-index">
   <h1 class="text-center font-weight-bold p-3 text-success">〜飼主一覧〜</h1>
+  <%= search_form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :name_cont, "飼主検索：" %>
+      <%= f.text_field :name_cont %>
+      <%= f.submit %>
+    </div>
+  <% end %>
     <% @users.each do |user| %>
       <div class="content-users-index font-weight-bold">
         <div class="user-photo">
